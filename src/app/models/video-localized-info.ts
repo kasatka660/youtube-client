@@ -1,4 +1,4 @@
 export interface VideoLocalizedInfo {
-  title: string,
-  description: string,
+  title: string;
+  description: string;
 }

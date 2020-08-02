@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {VideoItem} from "../../models/video-item";
+import {VideoItem} from '../../models/video-item';
 
 @Component({
   selector: 'app-video-list',
@@ -12,7 +12,7 @@ export class VideoListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }
