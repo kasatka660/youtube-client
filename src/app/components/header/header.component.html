@@ -1,3 +1,15 @@
-<app-search-form></app-search-form>
-<app-authorization></app-authorization>
-<app-sort-settings></app-sort-settings>
+<div class="header py-3">
+  <div class="header-content">
+    <div class="container">
+      <div class="row my-3">
+        <app-logo></app-logo>
+        <app-search-form></app-search-form>
+        <app-sort-toggle (expandSortSettings)="expandSortSettings($event)" class="toggle-btn"></app-sort-toggle>
+        <app-authorization></app-authorization>
+      </div>
+      <div class="row">
+        <app-sort-settings [sortSettingsHidden]="sortSettingsHidden" ></app-sort-settings>
+      </div>
+    </div>
+  </div>
+</div>

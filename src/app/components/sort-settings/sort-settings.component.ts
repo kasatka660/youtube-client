@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-sort-settings',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SortSettingsComponent implements OnInit {
 
+  @Input() public sortSettingsHidden: boolean;
   constructor() { }
 
   public ngOnInit(): void {

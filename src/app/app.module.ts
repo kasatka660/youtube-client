@@ -12,8 +12,18 @@ import { SearchFormComponent } from './components/search-form/search-form.compon
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { RegistrationFormComponent } from './components/registration-form/registration-form.component';
 import { AuthorizationComponent } from './components/authorization/authorization.component';
-import { SearchFiltersComponent } from './components/search-filters/search-filters.component';
 import { SortSettingsComponent } from './components/sort-settings/sort-settings.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import { LogoComponent } from './components/logo/logo.component';
+import { SortToggleComponent } from './components/sort-toggle/sort-toggle.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { VideoDateStatusDirective } from './directives/video-date-status.directive';
+import { SortPipePipe } from './pipes/sort-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -27,13 +37,24 @@ import { SortSettingsComponent } from './components/sort-settings/sort-settings.
     LoginFormComponent,
     RegistrationFormComponent,
     AuthorizationComponent,
-    SearchFiltersComponent,
-    SortSettingsComponent
+    SortSettingsComponent,
+    LogoComponent,
+    SortToggleComponent,
+    VideoDateStatusDirective,
+    SortPipePipe
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+            imports: [
+              BrowserModule,
+              AppRoutingModule,
+              BrowserAnimationsModule,
+              MatInputModule,
+              FormsModule,
+              MatIconModule,
+              MatButtonModule,
+              ReactiveFormsModule,
+              MatCardModule,
+              MatButtonToggleModule
+            ],
   providers: [],
   bootstrap: [AppComponent]
 })

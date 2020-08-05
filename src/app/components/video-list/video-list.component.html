@@ -1,1 +1,10 @@
-<app-video-item *ngFor="let videoItem of videoList" [video]="videoItem"></app-video-item>
+<div class="container my-5">
+  <div class="row">
+    <ng-container *ngFor="let videoItem of videoList">
+      <div class="col-3" >
+        <app-video-item  [video]="videoItem"></app-video-item>
+      </div>
+    </ng-container>
+  </div>
+</div>
+

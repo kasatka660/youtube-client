@@ -1,0 +1,25 @@
+.sort-settings > * {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 12px;
+}
+
+.sort-item {
+  color: #2F80ED;
+}
+
+.sort-keyword-label {
+  display: inline-block;
+  color: #2F80ED;
+  margin-right: 10px;
+}
+
+.sort-title {
+  color: #929292;
+}
+
+.sort-keyword-input {
+  border: none;
+  width: 149px;
+  line-height: 13px;
+}

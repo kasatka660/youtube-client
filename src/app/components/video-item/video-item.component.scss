@@ -1,0 +1,20 @@
+.card {
+  border-bottom: solid 5px;
+}
+
+.card-text > span {
+  margin-right: 12px;
+  font-size: 12px;
+}
+
+.card-text > img {
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.card-title {
+  font-size: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

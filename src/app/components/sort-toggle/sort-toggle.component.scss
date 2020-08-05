@@ -1,0 +1,16 @@
+img {
+  width: 40px;
+  height: auto;
+}
+
+button {
+  border: none;
+  padding: 10px 0;
+  background: transparent;
+  opacity: 0.5;
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+

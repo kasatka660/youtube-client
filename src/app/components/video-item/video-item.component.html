@@ -1,1 +1,17 @@
-<p>video-item works!</p>
+<div class="card my-3" [appVideoDateStatus]="video.snippet.publishedAt">
+  <img class="card-img-top" [src]="video.snippet.thumbnails['medium'].url" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title" >{{video.snippet.title}}</h5>
+    <div class="card-text">
+      <img src="assets/images/viewed.png">
+      <span>{{video.statistics.viewCount}}</span>
+      <img src="assets/images/liked.png">
+      <span>{{video.statistics.likeCount}}</span>
+      <img src="assets/images/dislike.png">
+      <span>{{video.statistics.dislikeCount}}</span>
+      <img src="assets/images/count.png">
+      <span>{{video.statistics.commentCount}}</span>
+    </div>
+  </div>
+
+</div>

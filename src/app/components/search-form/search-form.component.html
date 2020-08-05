@@ -1,1 +1,10 @@
-<app-search-filters></app-search-filters>
+<form class="search-form" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+  <mat-form-field class="search-field" >
+    <mat-label>Start searching</mat-label>
+    <input matInput type="text" formControlName="valueToSearch">
+    <button mat-button *ngIf="searchForm.value['valueToSearch']" matSuffix mat-icon-button aria-label="Clear" (click)="resetSearch()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+  <button mat-stroked-button type="submit" class="search-button" color="primary" [disabled]="!searchForm.value['valueToSearch']">Search</button>
+</form>

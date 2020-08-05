@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  public sortSettingsHidden: boolean = true;
   constructor() { }
 
   public ngOnInit(): void {
+  }
+
+  public expandSortSettings(value: boolean): void {
+    this.sortSettingsHidden = value;
   }
 
 }
