@@ -24,6 +24,8 @@ import { SortToggleComponent } from './components/sort-toggle/sort-toggle.compon
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { VideoDateStatusDirective } from './directives/video-date-status.directive';
 import { SortPipePipe } from './pipes/sort-pipe.pipe';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BigNumberPipe } from './pipes/big-number.pipe';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { SortPipePipe } from './pipes/sort-pipe.pipe';
     LogoComponent,
     SortToggleComponent,
     VideoDateStatusDirective,
-    SortPipePipe
+    SortPipePipe,
+    BigNumberPipe
   ],
             imports: [
               BrowserModule,
@@ -53,7 +56,8 @@ import { SortPipePipe } from './pipes/sort-pipe.pipe';
               MatButtonModule,
               ReactiveFormsModule,
               MatCardModule,
-              MatButtonToggleModule
+              MatButtonToggleModule,
+              FontAwesomeModule
             ],
   providers: [],
   bootstrap: [AppComponent]

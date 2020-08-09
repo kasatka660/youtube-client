@@ -1,17 +1,19 @@
 <div class="card my-3" [appVideoDateStatus]="video.snippet.publishedAt">
-  <img class="card-img-top" [src]="video.snippet.thumbnails['medium'].url" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title" >{{video.snippet.title}}</h5>
-    <div class="card-text">
-      <img src="assets/images/viewed.png">
-      <span>{{video.statistics.viewCount}}</span>
-      <img src="assets/images/liked.png">
-      <span>{{video.statistics.likeCount}}</span>
-      <img src="assets/images/dislike.png">
-      <span>{{video.statistics.dislikeCount}}</span>
-      <img src="assets/images/count.png">
-      <span>{{video.statistics.commentCount}}</span>
-    </div>
+  <div class="card-image-container">
+    <img class="card-img-top" [src]="video.snippet.thumbnails['medium'].url" alt="Card image cap">
   </div>
-
+  <div class="card-body">
+    <div class="card-text">
+      <img src="assets/images/viewed.png" alt="Views">
+      <span>{{video.statistics.viewCount | bigNumber}}</span>
+      <img src="assets/images/liked.png" alt="Likes">
+      <span>{{video.statistics.likeCount | bigNumber}}</span>
+      <img src="assets/images/dislike.png" alt="Dislikes">
+      <span>{{video.statistics.dislikeCount | bigNumber}}</span>
+      <img src="assets/images/count.png" alt="Count">
+      <span>{{video.statistics.commentCount | bigNumber}}</span>
+    </div>
+    <h5 class="card-title" >{{video.snippet.title}}</h5>
+    <button mat-stroked-button>more...</button>
+  </div>
 </div>

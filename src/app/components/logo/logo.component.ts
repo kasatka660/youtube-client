@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-logo',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./logo.component.scss']
 })
 export class LogoComponent implements OnInit {
-
+  faYoutube = faYoutube;
   constructor() { }
 
   ngOnInit(): void {

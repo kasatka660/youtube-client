@@ -2,13 +2,19 @@
   <div class="header-content">
     <div class="container">
       <div class="row my-3">
-        <app-logo></app-logo>
-        <app-search-form></app-search-form>
-        <app-sort-toggle (expandSortSettings)="expandSortSettings($event)" class="toggle-btn"></app-sort-toggle>
-        <app-authorization></app-authorization>
+        <div class="col-9 search-part">
+          <app-logo></app-logo>
+          <app-search-form></app-search-form>
+          <app-sort-toggle (expandSortSettings)="expandSortSettings($event)" class="toggle-btn"></app-sort-toggle>
+        </div>
+       <div class="col-3">
+         <app-authorization></app-authorization>
+       </div>
       </div>
       <div class="row">
-        <app-sort-settings [sortSettingsHidden]="sortSettingsHidden" ></app-sort-settings>
+        <div class="col-9">
+          <app-sort-settings [sortSettingsHidden]="sortSettingsHidden" ></app-sort-settings>
+        </div>
       </div>
     </div>
   </div>
