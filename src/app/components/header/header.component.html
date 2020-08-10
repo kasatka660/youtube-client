@@ -4,7 +4,7 @@
       <div class="row my-3">
         <div class="col-9 search-part">
           <app-logo></app-logo>
-          <app-search-form></app-search-form>
+          <app-search-form (startSearch)="updateVideos($event)"></app-search-form>
           <app-sort-toggle (expandSortSettings)="expandSortSettings($event)" class="toggle-btn"></app-sort-toggle>
         </div>
        <div class="col-3">

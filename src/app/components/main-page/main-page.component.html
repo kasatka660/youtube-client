@@ -1,2 +1,2 @@
-<app-header></app-header>
-<app-page-content></app-page-content>
+<app-header (videosUpdate)="updateVideoList($event)"  ></app-header>
+<app-page-content [videoList]="videoList"></app-page-content>

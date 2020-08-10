@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
@@ -10,6 +10,7 @@ export class SearchFormComponent implements OnInit {
   public searchForm: FormGroup = new FormGroup({
                                valueToSearch: new FormControl('')
                              });
+  @Output() startSearch: EventEmitter<boolean> = new EventEmitter(false);
   constructor() { }
 
   public ngOnInit(): void {
@@ -17,11 +18,11 @@ export class SearchFormComponent implements OnInit {
 
   public resetSearch(): void {
     this.searchForm.setValue({valueToSearch: ''});
-
+    this.startSearch.emit(false);
   }
 
   public onSubmit(): void {
-
+    this.startSearch.emit(true);
   }
 
 }

@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {VideoItem} from '../../models/video-item';
-import {data} from '../../data/data';
 
 @Component({
   selector: 'app-video-list',
@@ -9,12 +8,10 @@ import {data} from '../../data/data';
 })
 export class VideoListComponent implements OnInit {
 
-  public videoList: VideoItem[];
-
+  @Input() videoList: VideoItem[] = [];
   constructor() { }
 
   public ngOnInit(): void {
-    this.videoList = data.items;
   }
 
 }
