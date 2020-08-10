@@ -1,7 +1,7 @@
 <ng-container *ngIf="videoList.length">
   <div class="container my-5">
     <div class="row">
-      <ng-container *ngFor="let videoItem of videoList">
+      <ng-container *ngFor="let videoItem of videoList | filterByKeyWord: filterKeyword ">
         <div class="col-3">
           <app-video-item  [video]="videoItem"></app-video-item>
         </div>

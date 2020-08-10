@@ -13,7 +13,7 @@
       </div>
       <div class="row">
         <div class="col-9">
-          <app-sort-settings (sortingEvent)="sortByCriteria($event)"  [sortSettingsHidden]="sortSettingsHidden" ></app-sort-settings>
+          <app-sort-settings (sortingEvent)="sortByCriteria($event)" (filterEvent)="filterByKeyword($event)"  [sortSettingsHidden]="sortSettingsHidden" ></app-sort-settings>
         </div>
       </div>
     </div>

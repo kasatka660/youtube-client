@@ -5,5 +5,5 @@
   <span class="sort-item" (click)="sortBy('views')">count of views</span>
   <span [ngClass]="{'hidden': viewsAscending === null, 'arrow-asc' : viewsAscending}">&#x2191;</span>
   <label class="sort-keyword-label" for="sortKeyWord">by word or sentence</label>
-  <input class="sort-keyword-input" type="text" id="sortKeyWord">
+  <input class="sort-keyword-input" (change)="onKeywordChange($event)"  type="text" id="sortKeyWord">
 </div>

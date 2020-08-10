@@ -7,10 +7,10 @@ import { faYoutube } from '@fortawesome/free-brands-svg-icons';
   styleUrls: ['./logo.component.scss']
 })
 export class LogoComponent implements OnInit {
-  faYoutube = faYoutube;
+  public faYoutube = faYoutube;
   constructor() { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
 
 }

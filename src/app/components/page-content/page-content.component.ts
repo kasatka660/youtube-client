@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {VideoItem} from "../../models/video-item";
+import {VideoItem} from '../../models/video-item';
 
 @Component({
   selector: 'app-page-content',
@@ -8,7 +8,9 @@ import {VideoItem} from "../../models/video-item";
 })
 export class PageContentComponent implements OnInit {
 
-  @Input() videoList: VideoItem[] = [];
+  @Input() public videoList: VideoItem[] = [];
+  @Input() filterKeyword: string = ''
+
   constructor() { }
 
   public ngOnInit(): void {

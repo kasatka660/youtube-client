@@ -8,9 +8,10 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 export class SortSettingsComponent implements OnInit {
 
   @Input() public sortSettingsHidden: boolean;
-  dateAscending: boolean = null;
-  viewsAscending: boolean = null;
-  @Output() sortingEvent: EventEmitter<string> = new EventEmitter();
+  public dateAscending: boolean = null;
+  public viewsAscending: boolean = null;
+  @Output() public sortingEvent: EventEmitter<string> = new EventEmitter();
+  @Output() public filterEvent: EventEmitter<string> = new EventEmitter();
 
   constructor() { }
 
@@ -26,6 +27,10 @@ export class SortSettingsComponent implements OnInit {
       this.viewsAscending = !this.viewsAscending;
       this.sortingEvent.emit(criteria);
     }
+  }
+
+  public onKeywordChange(event: Event) {
+    this.filterEvent.emit(event.target['value'])
   }
 
 }

@@ -1,2 +1,2 @@
-<app-header (videosUpdate)="updateVideoList($event)" (sortingEvent)="sortByCriteria($event)"></app-header>
-<app-page-content [videoList]="videoList"></app-page-content>
+<app-header (videosUpdate)="updateVideoList($event)" (sortingEvent)="sortByCriteria($event)" (filterEvent)="filterByKeyword($event)" ></app-header>
+<app-page-content [videoList]="videoList" [filterKeyword]="filterKeyword"></app-page-content>

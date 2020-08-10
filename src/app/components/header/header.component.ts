@@ -7,8 +7,9 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() videosUpdate: EventEmitter<boolean> = new EventEmitter(false);
-  @Output() sortingEvent: EventEmitter<string> = new EventEmitter();
+  @Output() public videosUpdate: EventEmitter<boolean> = new EventEmitter(false);
+  @Output() public sortingEvent: EventEmitter<string> = new EventEmitter();
+  @Output() public filterEvent: EventEmitter<string> = new EventEmitter();
   public sortSettingsHidden: boolean = true;
 
   constructor() { }
@@ -27,5 +28,10 @@ export class HeaderComponent implements OnInit {
   public sortByCriteria(criteria) {
     this.sortingEvent.emit(criteria);
   }
+
+  public filterByKeyword(keyword) {
+    this.filterEvent.emit(keyword);
+  }
+
 
 }

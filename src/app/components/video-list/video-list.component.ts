@@ -8,7 +8,8 @@ import {VideoItem} from '../../models/video-item';
 })
 export class VideoListComponent implements OnInit {
 
-  @Input() videoList: VideoItem[] = [];
+  @Input() public filterKeyword: string = '';
+  @Input() public videoList: VideoItem[] = [];
   constructor() { }
 
   public ngOnInit(): void {

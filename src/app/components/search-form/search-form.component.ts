@@ -10,7 +10,7 @@ export class SearchFormComponent implements OnInit {
   public searchForm: FormGroup = new FormGroup({
                                valueToSearch: new FormControl('')
                              });
-  @Output() startSearch: EventEmitter<boolean> = new EventEmitter(false);
+  @Output() public startSearch: EventEmitter<boolean> = new EventEmitter(false);
   constructor() { }
 
   public ngOnInit(): void {

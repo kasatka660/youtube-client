@@ -23,7 +23,7 @@ import { LogoComponent } from './components/logo/logo.component';
 import { SortToggleComponent } from './components/sort-toggle/sort-toggle.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { VideoDateStatusDirective } from './directives/video-date-status.directive';
-import { SortPipePipe } from './pipes/sort-pipe.pipe';
+import {FilterByKeywordPipe} from './pipes/filter-by-keyword.pipe';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BigNumberPipe } from './pipes/big-number.pipe';
 
@@ -43,7 +43,7 @@ import { BigNumberPipe } from './pipes/big-number.pipe';
     LogoComponent,
     SortToggleComponent,
     VideoDateStatusDirective,
-    SortPipePipe,
+    FilterByKeywordPipe,
     BigNumberPipe
   ],
             imports: [

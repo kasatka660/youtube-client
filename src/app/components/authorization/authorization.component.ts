@@ -7,7 +7,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./authorization.component.scss']
 })
 export class AuthorizationComponent implements OnInit {
-  faUser=faUser;
+  public faUser = faUser;
   constructor() { }
 
   public ngOnInit(): void {

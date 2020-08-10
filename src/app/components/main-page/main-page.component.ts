@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {data} from '../../data/data';
-import {VideoItem} from "../../models/video-item";
+import {VideoItem} from '../../models/video-item';
 
 @Component({
   selector: 'app-main-page',
@@ -10,25 +10,26 @@ import {VideoItem} from "../../models/video-item";
 export class MainPageComponent implements OnInit {
 
   public videoList: VideoItem[] = [];
-  dateAscending: boolean = null;
-  viewsAscending: boolean = null;
+  public dateAscending: boolean = null;
+  public viewsAscending: boolean = null;
+  @Input() filterKeyword: string = ''
 
   constructor() { }
 
   public ngOnInit(): void {
   }
 
-  updateVideoList(e: boolean) {
+  public updateVideoList(e: boolean) {
     this.videoList = e ?  data.items : [];
   }
 
-  sortByCriteria(criteria) {
+  public sortByCriteria(criteria) {
     if (this.videoList.length) {
       criteria === 'date' ? this.sortByDate() : this.sortByViews();
     }
   }
 
-  sortByDate() {
+  public sortByDate() {
     this.dateAscending = !this.dateAscending;
     if (this.dateAscending) {
       this.videoList.sort((a, b) =>
@@ -39,7 +40,7 @@ export class MainPageComponent implements OnInit {
     }
   }
 
-  sortByViews() {
+  public sortByViews() {
     this.viewsAscending = !this.viewsAscending;
     if (this.viewsAscending) {
       this.videoList.sort((a, b) =>
@@ -47,6 +48,12 @@ export class MainPageComponent implements OnInit {
     } else {
       this.videoList.sort((b, a) =>
         (Number(a.statistics.viewCount) - Number(b.statistics.viewCount)) );
+    }
+  }
+
+  public filterByKeyword(keyword) {
+    if (this.videoList.length) {
+      this.filterKeyword = keyword;
     }
   }
 
