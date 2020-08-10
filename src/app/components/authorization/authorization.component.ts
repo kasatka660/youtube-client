@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import {IconDefinition} from '@fortawesome/fontawesome-common-types';
 
 @Component({
   selector: 'app-authorization',
@@ -7,7 +8,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./authorization.component.scss']
 })
 export class AuthorizationComponent implements OnInit {
-  public faUser = faUser;
+  public faUser: IconDefinition = faUser;
   constructor() { }
 
   public ngOnInit(): void {

@@ -25,13 +25,11 @@ export class HeaderComponent implements OnInit {
     this.videosUpdate.emit(e);
   }
 
-  public sortByCriteria(criteria) {
+  public sortByCriteria(criteria: string): void {
     this.sortingEvent.emit(criteria);
   }
 
-  public filterByKeyword(keyword) {
+  public filterByKeyword(keyword: string): void {
     this.filterEvent.emit(keyword);
   }
-
-
 }

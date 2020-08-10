@@ -12,24 +12,24 @@ export class MainPageComponent implements OnInit {
   public videoList: VideoItem[] = [];
   public dateAscending: boolean = null;
   public viewsAscending: boolean = null;
-  @Input() filterKeyword: string = ''
+  @Input() public filterKeyword: string = '';
 
   constructor() { }
 
   public ngOnInit(): void {
   }
 
-  public updateVideoList(e: boolean) {
+  public updateVideoList(e: boolean): void {
     this.videoList = e ?  data.items : [];
   }
 
-  public sortByCriteria(criteria) {
+  public sortByCriteria(criteria: string): void {
     if (this.videoList.length) {
       criteria === 'date' ? this.sortByDate() : this.sortByViews();
     }
   }
 
-  public sortByDate() {
+  public sortByDate(): void {
     this.dateAscending = !this.dateAscending;
     if (this.dateAscending) {
       this.videoList.sort((a, b) =>
@@ -40,7 +40,7 @@ export class MainPageComponent implements OnInit {
     }
   }
 
-  public sortByViews() {
+  public sortByViews(): void {
     this.viewsAscending = !this.viewsAscending;
     if (this.viewsAscending) {
       this.videoList.sort((a, b) =>
@@ -51,7 +51,7 @@ export class MainPageComponent implements OnInit {
     }
   }
 
-  public filterByKeyword(keyword) {
+  public filterByKeyword(keyword: string): void {
     if (this.videoList.length) {
       this.filterKeyword = keyword;
     }

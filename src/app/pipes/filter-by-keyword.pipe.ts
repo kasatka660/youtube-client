@@ -6,8 +6,9 @@ import {VideoItem} from '../models/video-item';
 })
 export class FilterByKeywordPipe implements PipeTransform {
 
-  public transform(videoList: VideoItem[], string): VideoItem[] {
+  public transform(videoList: VideoItem[], keyword: string): VideoItem[] {
     return videoList.filter(videoItem =>
-      videoItem.snippet.title.includes(string.trim()) || videoItem.snippet.description.includes(string.trim()) );
+      videoItem.snippet.title.includes(keyword.trim())
+      || videoItem.snippet.description.includes(keyword.trim()) );
   }
 }

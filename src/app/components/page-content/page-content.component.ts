@@ -9,7 +9,7 @@ import {VideoItem} from '../../models/video-item';
 export class PageContentComponent implements OnInit {
 
   @Input() public videoList: VideoItem[] = [];
-  @Input() filterKeyword: string = ''
+  @Input() public filterKeyword: string = '';
 
   constructor() { }
 

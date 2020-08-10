@@ -29,8 +29,8 @@ export class SortSettingsComponent implements OnInit {
     }
   }
 
-  public onKeywordChange(event: Event) {
-    this.filterEvent.emit(event.target['value'])
+  public onKeywordChange(event: Event): void {
+    this.filterEvent.emit(event.target.value);
   }
 
 }
