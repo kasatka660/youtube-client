@@ -1,7 +1,9 @@
 <div *ngIf="!sortSettingsHidden" class="sort-settings">
   <span class="sort-title">Sorting by:</span>
-  <span class="sort-item">date</span>
-  <span class="sort-item">count of views</span>
+  <span class="sort-item" (click)="sortBy('date')">date</span>
+  <span [ngClass]="{'hidden': dateAscending === null, 'arrow-asc' : dateAscending}">&#x2191;</span>
+  <span class="sort-item" (click)="sortBy('views')">count of views</span>
+  <span [ngClass]="{'hidden': viewsAscending === null, 'arrow-asc' : viewsAscending}">&#x2191;</span>
   <label class="sort-keyword-label" for="sortKeyWord">by word or sentence</label>
   <input class="sort-keyword-input" type="text" id="sortKeyWord">
 </div>

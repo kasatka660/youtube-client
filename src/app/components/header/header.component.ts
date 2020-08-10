@@ -8,6 +8,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Output() videosUpdate: EventEmitter<boolean> = new EventEmitter(false);
+  @Output() sortingEvent: EventEmitter<string> = new EventEmitter();
   public sortSettingsHidden: boolean = true;
 
   constructor() { }
@@ -19,8 +20,12 @@ export class HeaderComponent implements OnInit {
     this.sortSettingsHidden = value;
   }
 
-  public updateVideos(e: boolean) {
+  public updateVideos(e: boolean): void {
     this.videosUpdate.emit(e);
+  }
+
+  public sortByCriteria(criteria) {
+    this.sortingEvent.emit(criteria);
   }
 
 }
